@@ -1,0 +1,59 @@
+GET http://localhost:3000/companies
+
+### Create a new Company
+
+POST http://localhost:3000/companies
+Content-Type: application/json
+
+{
+    "name": "Facebook",
+    "domain": "www.facebook.com",
+    "description": "Social Network App" 
+}
+
+### Create a new Company
+
+POST http://localhost:3000/companies
+Content-Type: application/json
+
+{
+    "name": "Google",
+    "domain": "www.google.com",
+    "description": "Search Engine app" 
+}
+
+### Find a single Company
+
+GET http://localhost:3000/companies/1
+
+### Find a single Company
+
+GET http://localhost:3000/companies/2
+
+### Update Company
+PUT http://localhost:3000/companies/1
+Content-Type: application/json
+
+{
+    "domain": "www.netflix.com",
+    "name": "Netflix"
+}
+
+### Create many records
+POST http://localhost:3000/companies/bulk
+Content-Type: application/json
+
+{
+    "bulk": [
+        {
+            "domain": "apple.com",
+            "name": "Apple",
+            "description": "Electrcian tools"
+        },
+        {
+            "domain": "mandrill.com",
+            "name": "Mandrill",
+            "description": "Email Marketing Service"
+        }
+    ]
+}
